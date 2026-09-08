@@ -1,0 +1,16 @@
+{
+  "version": 3,
+  "status": "pass",
+  "tests": [
+    {
+      "name": "greets by name",
+      "status": "pass",
+      "test_code": "greet(\"Alice\") is \"Hello, Alice!\""
+    },
+    {
+      "name": "greets again without a trailing newline",
+      "status": "pass",
+      "test_code": "print(\"no newline after this\")\ngreet(\"Bob\") is \"Hello, Bob!\""
+    }
+  ]
+}

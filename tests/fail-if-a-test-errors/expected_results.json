@@ -1,0 +1,33 @@
+{
+  "version": 3,
+  "status": "fail",
+  "tests": [
+    {
+      "name": "divide divides",
+      "status": "pass",
+      "test_code": "divide(6, 3) is 2"
+    },
+    {
+      "name": "divide by zero is an unexpected exception",
+      "status": "fail",
+      "message": "line 10, column 2: failed because:\n\nGot unexpected exception\n/: division by zero, 1 0",
+      "test_code": "divide(1, 0) is 0"
+    },
+    {
+      "name": "explode raises boom",
+      "status": "pass",
+      "test_code": "explode() raises \"boom\""
+    },
+    {
+      "name": "a check block that ends in an error",
+      "status": "error",
+      "message": "Check block ended in the following error (not all tests may have run):\n\n\"boom\"fail-if-a-test-errors.arr:10:2-10:15\nfail-if-a-test-errors-test.arr:18:2-18:11",
+      "test_code": "explode()\n1 is 1"
+    },
+    {
+      "name": "check-block-1",
+      "status": "pass",
+      "test_code": "divide(9, 3) is 3"
+    }
+  ]
+}

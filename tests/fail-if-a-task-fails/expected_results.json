@@ -1,0 +1,38 @@
+{
+  "version": 3,
+  "status": "fail",
+  "tests": [
+    {
+      "name": "expected minutes in oven",
+      "status": "pass",
+      "test_code": "expected-minutes-in-oven() is 40",
+      "task_id": 1
+    },
+    {
+      "name": "remaining minutes in oven",
+      "status": "fail",
+      "message": "line 12, column 2: failed because:\n\nValues not equal -15 15",
+      "test_code": "remaining-minutes-in-oven(25) is 15",
+      "task_id": 2
+    },
+    {
+      "name": "remaining minutes in oven when just put in",
+      "status": "fail",
+      "message": "line 17, column 2: failed because:\n\nValues not equal -40 40",
+      "test_code": "remaining-minutes-in-oven(0) is 40",
+      "task_id": 2
+    },
+    {
+      "name": "preparation time in minutes for one layer",
+      "status": "pass",
+      "test_code": "preparation-time-in-minutes(1) is 2",
+      "task_id": 3
+    },
+    {
+      "name": "total time for two layers, not linked to a task",
+      "status": "fail",
+      "message": "line 26, column 2: failed because:\n\nValues not equal -6 14",
+      "test_code": "preparation-time-in-minutes(2) + remaining-minutes-in-oven(30) is 14"
+    }
+  ]
+}

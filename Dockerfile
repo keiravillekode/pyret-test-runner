@@ -10,6 +10,8 @@ COPY package.json package-lock.json .npmrc ./
 
 # install packages required to run the tests
 RUN apk add --no-cache \
+    bash \
+    gawk \
     jq && \
     npm ci --ignore-scripts --no-audit --no-fund && \
     npm cache clean --force && \

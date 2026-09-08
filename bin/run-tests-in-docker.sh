@@ -1,7 +1,7 @@
 #!/usr/bin/env sh
 
 # Synopsis:
-# Test the test runner Docker image by running it against a predefined set of 
+# Test the test runner Docker image by running it against a predefined set of
 # solutions with an expected output.
 # The test runner Docker image is built automatically.
 
@@ -15,7 +15,7 @@
 # Stop executing when a command returns a non-zero return code
 set -e
 
-# Build the Docker image  
+# Build the Docker image
 docker build --rm -t exercism/test-runner .
 
 # Run the Docker image using the settings mimicking the production environment

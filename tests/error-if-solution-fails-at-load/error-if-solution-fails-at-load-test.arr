@@ -1,6 +1,6 @@
 use context starter2024
 
-include file("fail-if-empty-solution.arr")
+include file("error-if-solution-fails-at-load.arr")
 
 check "returns-true returns true":
   returns-true() is true

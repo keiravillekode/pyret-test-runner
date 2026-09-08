@@ -1,0 +1,5 @@
+{
+  "version": 3,
+  "status": "error",
+  "message": "The run ended in error:\n\nthis solution fails while loading\nPyret stack:\n  error-if-solution-fails-at-load.arr: line 9, column 0"
+}

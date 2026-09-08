@@ -1,0 +1,36 @@
+{
+  "version": 3,
+  "status": "pass",
+  "tests": [
+    {
+      "name": "expected minutes in oven",
+      "status": "pass",
+      "test_code": "expected-minutes-in-oven() is 40",
+      "task_id": 1
+    },
+    {
+      "name": "remaining minutes in oven",
+      "status": "pass",
+      "test_code": "remaining-minutes-in-oven(25) is 15",
+      "task_id": 2
+    },
+    {
+      "name": "remaining minutes in oven when just put in",
+      "status": "pass",
+      "test_code": "remaining-minutes-in-oven(0) is 40",
+      "task_id": 2
+    },
+    {
+      "name": "preparation time in minutes for one layer",
+      "status": "pass",
+      "test_code": "preparation-time-in-minutes(1) is 2",
+      "task_id": 3
+    },
+    {
+      "name": "preparation time in minutes for multiple layers",
+      "status": "pass",
+      "test_code": "preparation-time-in-minutes(4) is 8",
+      "task_id": 3
+    }
+  ]
+}

@@ -1,4 +1,16 @@
 {
-  "version": 1,
-  "status": "pass"
+  "version": 3,
+  "status": "pass",
+  "tests": [
+    {
+      "name": "returns-true returns true",
+      "status": "pass",
+      "test_code": "returns-true() is true"
+    },
+    {
+      "name": "returns-false returns true",
+      "status": "pass",
+      "test_code": "returns-false() is false"
+    }
+  ]
 }

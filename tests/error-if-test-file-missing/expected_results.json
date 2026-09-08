@@ -1,0 +1,5 @@
+{
+  "version": 3,
+  "status": "error",
+  "message": "no test file found (expected error-if-test-file-missing-test.arr)"
+}
