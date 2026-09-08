@@ -1,0 +1,5 @@
+{
+  "version": 3,
+  "status": "error",
+  "message": "The name `leap-year` at error-if-test-does-not-compile-test.arr:6:2-6:11 is unbound. It is used but not previously defined.  You may need to run the program, or check dashes and capitalization in the name.\n\nThere were compilation errors"
+}

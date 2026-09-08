@@ -1,0 +1,5 @@
+{
+  "version": 3,
+  "status": "error",
+  "message": "7The declaration of `square` at error-if-solution-does-not-compile.arr:5:0-7:3 shadows the declaration of a built-in of the same name, defined at <builtin builtin://internal-image-untyped>\n\nThere were compilation errors"
+}

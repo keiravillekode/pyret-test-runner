@@ -153,6 +153,25 @@ main() {
         # that raised while loading, or a test file without a single check
         # block. Pyret's explanation is on stderr.
         if grep -q '[^[:space:]]' "${work_dir}/stderr"; then
+            # A solution that fails to compile leaves every name the test
+            # file uses unbound, so the one real error arrives buried under
+            # an unbound-name cascade. Compiling the solution alone finds
+            # out whether it is the module at fault; when it is, its errors
+            # are the whole story. The compile server and module cache are
+            # warm from the first attempt, so this costs little, and only
+            # on this path — a passing run never reaches it.
+            if grep -q 'There were compilation errors' "${work_dir}/stderr" \
+                && [[ -f "${stage_dir}/${slug}.arr" ]]; then
+                (
+                    cd "${stage_dir}" || exit 1
+                    pyret -q --checks none "${slug}.arr" \
+                        > /dev/null 2> "${work_dir}/solution-stderr"
+                )
+                if grep -q 'There were compilation errors' \
+                    "${work_dir}/solution-stderr"; then
+                    mv "${work_dir}/solution-stderr" "${work_dir}/stderr"
+                fi
+            fi
             sanitize "${work_dir}/stderr" > "${work_dir}/message"
         elif [[ "${last_line}" == "{}" ]]; then
             printf 'no check blocks were run\n' > "${work_dir}/message"
